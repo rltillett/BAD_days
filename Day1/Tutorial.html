@@ -13133,7 +13133,8 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># In case you need to install the packages</span>
- install.packages<span class="p">(</span><span class="s">&quot;xlsx&quot;</span><span class="p">)</span>
+ install.packages<span class="p">(</span><span class="s">&quot;readxl&quot;</span><span class="p">)</span>
+ install.packages<span class="p">(</span><span class="s">&quot;writexl&quot;</span><span class="p">)</span>
  install.packages<span class="p">(</span><span class="s">&quot;gdata&quot;</span><span class="p">)</span>
  install.packages<span class="p">(</span><span class="s">&quot;ape&quot;</span><span class="p">)</span>
 </pre></div>
@@ -13178,7 +13179,7 @@ The downloaded binary packages are in
 <span class="c1"># If R version is 3.5 or higher, install the new way:</span>
 <span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="kp">requireNamespace</span><span class="p">(</span><span class="s">&quot;BiocManager&quot;</span><span class="p">,</span> quietly <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
     install.packages<span class="p">(</span><span class="s">&quot;BiocManager&quot;</span><span class="p">)</span>
-BiocManager<span class="o">::</span>install<span class="p">(</span><span class="s">&quot;multtest&quot;</span><span class="p">,</span> version <span class="o">=</span> <span class="s">&quot;3.8&quot;</span><span class="p">)</span>
+BiocManager<span class="o">::</span>install<span class="p">(</span><span class="s">&quot;multtest&quot;</span><span class="p">)</span>
 
 <span class="c1">#If R version is 3.4 or older, try installing the old way instead:</span>
 <span class="kn">source</span><span class="p">(</span><span class="s">&quot;http://bioconductor.org/biocLite.R&quot;</span><span class="p">);</span>
@@ -26338,7 +26339,7 @@ Let's have a look at the <code>barplot</code> arguments:</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We are going to focus on only a few of the histgram arguments:</p>
+<p>We are going to focus on only a few of the barplot arguments:</p>
 <ul>
 <li><code>beside</code>: <code>TRUE</code> for the bars to be displayed as justapoxed bars, <code>FALSE</code> for stacked bars</li>
 <li><code>horiz</code> : <code>FALSE</code> bars displayed vertically with the first bar to the left, <code>TRUE</code> bars are displayed horizontally with the first at the bottom.</li>
@@ -35079,7 +35080,8 @@ gAABAgQIECBAgAABAgQ2v8D/B0rOUNWQgVbKAAAAAElFTkSuQmCC"
 <div class="prompt input_prompt">In&nbsp;[117]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>mydata<span class="o">&lt;-</span>read.delim<span class="p">(</span><span class="s">&quot;./NeuralStemCellData.tab.txt&quot;</span><span class="p">,</span> row.names<span class="o">=</span><span class="m">1</span><span class="p">,</span> header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># download &quot;NeuralStemCellData.tab.txt&quot; from the github repository first and place it in the current working directory</span>
+mydata<span class="o">&lt;-</span>read.delim<span class="p">(</span><span class="s">&quot;./NeuralStemCellData.tab.txt&quot;</span><span class="p">,</span> row.names<span class="o">=</span><span class="m">1</span><span class="p">,</span> header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
 </pre></div>
 
     </div>
